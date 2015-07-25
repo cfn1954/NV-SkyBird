@@ -1,6 +1,7 @@
+/* Uncomment to compile from TextWrangler
 #!/bin/sh
 /usr/bin/gcc -xc -o temp -lopenal - <<ENDOFCODE
-
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -176,7 +177,8 @@ int main(int argc, char *argv[])
 	return EXIT_SUCCESS;                                                        
 }
 
-
+/* Uncomment to compile from TextWrangler
 ENDOFCODE
 ./temp
 read
+*/
