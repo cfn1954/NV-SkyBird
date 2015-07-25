@@ -1,0 +1,4 @@
+OpenAL uses signed for 16-bit, and unsigned for 8-bit on all platforms. 16-bit
+data uses the native endianness of the system (little-endian for x86, big-
+endian for PPC), but is otherwise system independent. That goes for capturing
+as well as buffering via alBufferData. 
