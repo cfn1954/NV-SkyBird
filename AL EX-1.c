@@ -1,13 +1,19 @@
 /* Uncomment to compile from TextWrangler
 #!/bin/sh
-/usr/bin/gcc -xc -o temp -lopenal - <<ENDOFCODE
+/usr/bin/gcc -xc -o temp -framework openal - <<ENDOFCODE  remove this one to use openal-soft
+/usr/bin/gcc -xc -o temp -lopenal - <<ENDOFCODE  remove this one to use built-in library
 */
 
 #include <stdio.h>
 #include <stdlib.h>
-// OS X specific headers
+#include <openal/al.h>
+#include <openal/alc.h>
+//#include <openal/MacOSX_OALExtensions.h>		//This will include the other two headers as well as other stuff
+
+/*// OpenAL-Soft headers
 #include <AL/al.h>
 #include <AL/alc.h>
+Uncomment and remove above for openAL-Soft installed via home brew*/
 
 
 int main(int argc, char *argv[])
